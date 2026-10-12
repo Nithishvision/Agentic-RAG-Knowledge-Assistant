@@ -1,0 +1,66 @@
+# Core LLM and RAG framework
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-text-splitters
+
+# Agent workflow orchestration
+langgraph
+
+# Embeddings and vector database
+sentence-transformers
+chromadb
+
+# Hugging Face model integration
+transformers
+torch
+
+# Environment and configuration
+python-dotenv
+
+# Jupyter notebook execution
+jupyter
+ipykernel
+
+
+## Why I Built This Project
+
+I built this project to understand how Large Language Models (LLMs) can answer questions using external knowledge rather than relying only on their pretrained knowledge.
+
+A basic LLM application may generate incorrect or unsupported answers when it does not have the required information. Retrieval-Augmented Generation (RAG) helps address this problem by retrieving relevant content from a knowledge base and providing it as context to the language model.
+
+However, retrieving documents does not guarantee that the retrieved information is relevant to the user's question. I therefore explored an agentic approach using LangGraph, where the workflow can evaluate retrieved documents and rewrite the query when the initial retrieval is insufficient.
+
+### Project Objectives
+
+- Build a complete RAG pipeline for answering questions from technical documents.
+- Convert text into vector embeddings and store them in ChromaDB.
+- Retrieve relevant document chunks using semantic similarity search.
+- Use an LLM to evaluate the relevance of retrieved documents.
+- Rewrite queries when retrieved content is not sufficiently relevant.
+- Generate context-aware responses using OpenAI GPT-4o-mini.
+- Understand how LangGraph coordinates multiple steps through conditional routing.
+
+### Problem This Project Addresses
+
+The main challenge is that a question may not match the wording of relevant documents, or the initial retrieval may return irrelevant information. Instead of always generating an answer immediately, an agentic retrieval workflow can assess the retrieved content and attempt to improve the search query.
+
+### What I Learned
+
+Through this project, I gained practical experience with RAG architecture, semantic search, vector databases, embeddings, LLM integration, query transformation, relevance grading, and graph-based workflow orchestration.
+
+The project also helped me understand the difference between a basic RAG pipeline and an agentic workflow that can make conditional decisions during retrieval.
+
+### Intended Applications
+
+The same approach can be adapted for:
+
+- Internal company knowledge assistants.
+- Technical documentation search.
+- Question-answering systems for organizational documents.
+- Research assistants that retrieve information from a curated knowledge base.
+- Customer support assistants grounded in product documentation.
+
+These are potential applications of the architecture, rather than claims that all of them are implemented in the current notebook.
+
